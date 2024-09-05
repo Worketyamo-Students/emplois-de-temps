@@ -1,18 +1,27 @@
 
+/* Info: font-family use */
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     
     /*Info: les couleurs par default definis dans le design */
     --primary-color: #00A9FF;
     --secondary-color: #89CFF3;
-    --thernery-color: #ADBAFF;
+    --thernery-color: rgba(173, 187, 255, 0.527);
     --title-color: #443434;
     --white: #fff;
 
     /* Info: les tailles par default definis dans le design */
     --size-title: 4.8rem;
     --size-texte: 2.5rem;
+
+    /* Info: les fonts utiliser dans figma */
+    --font-Jockey: "Jockey One", sans-seri;
+    --font-Montserrat: "Montserrat", sans-serif;
 }
 
+
+/* Info: syntaxe minimal de mon main Css */
 * {
     margin: 0;
     padding: 0;
@@ -28,5 +37,52 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+h1 {
+    font-size: var(--size-title);
+    color: var(--title-color);
+    font-family: var(--font-Jockey);
+    margin-bottom: 2rem;
+}
+
+table, 
+tr, 
+td {
+    border-collapse: collapse;
+    border: .2rem solid var(--white);
+}
+
+table {
+    width: 80%;
+    background: var(--white);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+
+table  td  {
+    width: 10rem;
+    height: 10rem;
+    background: var(--thernery-color);
+    font-family: var(--font-Montserrat);
+    font-size: var(--size-texte);
+    color: var(--white);
+    text-align: center;
+
+}
+
+table tr  td:nth-child(1) {
+    background: var(--secondary-color);
+}
+
+table tr:nth-child(1) td {
+    background: var(--primary-color);
+}
+
+
 
